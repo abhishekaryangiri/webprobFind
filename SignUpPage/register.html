@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        .border1 {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(254, 126, 57); 
+}
+#top1 {
+    font-size: 15pxpx;
+    font-weight: bold;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+#top2 {
+    color: aliceblue;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+}
+        #start{
+            /* border: 1px solid red; */
+            height:860px ;
+            width: auto;
+            
+        }
+        #register{
+            /* border: 1px solid green; */
+            height:830px ;
+            width: 550px;
+            margin: auto;
+        }
+        #register>h1{
+            text-align: center;
+         padding-top: 20px;
+         font-size: 60px;
+        line-height: 43px;
+        font-weight: 500;
+        color: #333333
+        }
+        #register>h2{
+            padding-top: 20px;
+        font-family: Poppins, sans-serif;
+         color: #333333;
+         font-size: 36px;
+        }
+        #flex{
+            display: flex;
+         justify-content: space-between;
+      
+         padding-top: 20px;
+         margin-bottom: -50px;
+         font-size: 22px;
+         color: #777777;
+        }
+        #form >input{
+         height: 50px;
+         width:540px ;
+        margin-top: 40px;
+        /* border-color: gray; */
+        border-radius: 1px;
+        }
+        #form >h3{
+        font-size: 22px;
+        color: #777777;
+        margin-top: 20px;
+        margin-bottom: -35px;
+    
+     }
+     #form > #submit{
+        background: #a3b49b;
+        color: #ffffff;
+        font-size: 20px;
+    
+     }
+     #form >input+input{
+         margin-left: 5px;
+     }
+     h4{
+        color: #333333;
+        font-size: 16px;
+        cursor: pointer;
+     }
+     #lastpart{
+         /* border: 1px solid goldenrod; */
+         height: 650px;
+         margin-top: 10px;
+         display: flex;
+         background-color: #eef2f0;
+        color: #777777;
+        font-size: 14px;
+        
+     }
+     #lastpart>div{
+         height: 80%;
+         width: 25%;
+         /* border: 1px solid green; */
+         padding-left: 60px;
+        
+     }
+     a{
+        color: #66765f;
+        font-size: 22px;
+        font-weight: 800;
+     }
+     #creat{
+        height: 50px;
+         width:540px ;
+        margin-top: 40px;
+        /* border-color: gray; */
+        border-radius: 1px;
+        margin-left: 5px;
+        background: #a3b49b;
+        color: #ffffff;
+        font-size: 20px;
+     }
+     #creat>a{
+         text-decoration: none;
+         color: white;
+         font-weight: 100;
+         font-size: 18px;
+     }
+      #email{
+         height: 40px;
+         width: 330px;
+     }
+     #lastpart>div>h1{
+         color: black;
+     }
+     #lastpart>div>h3{
+         font-size: 20px;
+         line-height: 40px;
+         color:black
+     }
+     #follow{
+         display: flex;
+         gap: 20px;
+     }
+     #follow >img{
+         height: 30px;
+         padding-top: 20px;
+     }
+     #bottom{
+         border: 1px solid  #66765f;;
+         height: 60px;
+         width: 81%;
+         margin: auto;
+        margin-top: -80px;
+        padding-left: 2px;
+     }
+     #submit{
+        height: 50px;
+         width:540px ;
+        margin-top: 40px;
+        /* border-color: gray; */
+        border-radius: 1px;
+        background: #a3b49b;
+        color: #ffffff;
+        font-size: 20px;
+        margin-left: 5px;
+     }
+     
+     ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .last, .first {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+  
+  li {
+    background-color: white;
+  }
+  
+  li a {
+    display: block;
+    color: #737374;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  li a:hover {
+    background-color: rgb(174, 156, 156)
+    
+  }
+
+  #search1 {
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+}
+#myact1 {
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+}
+#cart1 {
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+}
+#middlepart{
+    /* border: 1px solid black; */
+    height: 30px;
+    background-color: #eef2f0;
+    padding-bottom: 20px;
+}
+h:hover{
+    background-color: #66765f;
+
+}
+#middlepart>h4{
+    color: #66765f;
+    padding-left: 20px;
+    
+}
+#error{
+    color: red;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="border1">
+        <div id="top1">FREE SHIPPING</div>
+        <div id="top2">ON ALL ORDERS OVER $35!</div>
+    </div>
+
+<!-- navbar start -->
+
+
+    <div class="header">
+        <ul>
+          <div class="first">
+            <div>  <img src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/90-Plus-years-500_160x.png?v=1609913612" alt=""></div>
+            <li><a href="">Shop</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Store Locator</a></li>
+          </div>
+          <div class="last">
+            <li><a href=""><img id="search1" src="https://img.icons8.com/ios/2x/search.png" alt=""></a></li>
+            <li><a href=""><img id="myact1" src="https://img.icons8.com/ios/2x/user--v3.gif" alt=""></a></li>
+            <li><a href=""><img id="cart1" src="https://img.icons8.com/dotty/2x/shopping-cart.png" alt=""></a></li>
+          </div>
+        </ul>
+      </div>
+
+<!--  navbar end -->
+<div id="middlepart">
+    <h4 id="h">Home / Account / Create Account</h4>
+</div>
+<!-- sing in page start -->
+    <div id="start">
+        <div id="register">
+            <h1>Create an Account</h1>
+            <h2>Personal Information</h2>
+            <div id="flex">
+                <h3>First Name *</h3>
+                <h3>* Required Fields</h3>
+            </div>
+            <form id="form" onsubmit=register(event)>
+                <input type="text" placeholder="Enter First Name" id="name" >
+                <h3>Last Name *</h3>
+                <input type="text" placeholder="Enter Last Name" id="lastname">
+                <h3>E-mail *</h3>
+                <input type="email" placeholder="Enter E-mail" id="email1" >
+                <h3>Password *</h3>
+                <input type="password" placeholder="Enter Password" id="password" >
+                <div id="error"></div>
+                <!-- <a href="sign in.html"><input id="submit" type="submit" value="CREATE" name="submit"  ></a> -->
+                <button id="creat" type="submit">CREATE</button>
+                <h4>or Return to Store</h4>
+            </form>
+        </div>
+    </div>
+                                                         <!-- end of 1st Div -->
+    <div id="lastpart">
+        <div>
+            <h1>Info</h1>
+            <h2>Contact us</h2>
+            <h2>FAQ</h2>
+            <h2>Blog</h2>
+            <h2>Store Locater</h2>
+            <h2>Careers</h2>
+        </div>
+        <div>
+            <h1>Policies</h1>
+            <h2>Shipping & Returns</h2>
+            <h2>Terms & Conditions</h2>
+            <h2>Privacy</h2>
+            <h2>CCPA</h2>
+            <h2>Accessibility</h2>
+        </div>
+        <div>
+            <h1>Contact Us</h1>
+            <h1>Email:</h1>
+           <a>writetous@himalayausa.com</a>
+           <h1>Phone:</h1>
+           <a>1-800-869-4640</a>
+           <h3>Mon-Fri,8am-5pm CT</h3>
+           <h1>Mail:</h1>
+           <h1>Himalya Wellness</h1>
+           <a>1101 Gillingham Lane
+               Sugar Land, TX 77478
+           </a>
+        </div>
+        <div>
+            <h1>Subscribe to Our Newsletter</h1>
+            <input type="email" placeholder="Enter your e-mail" id="email" >
+            <h3>By entering your email, you agree to our 
+                Terms & Conditions and Privacy Policy.</h3>
+                <div id="follow">
+                    <h1>Follow Us:</h1>
+                    <img src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-facebook-512.png">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpmurNFPc8RjY0iyVpKGXfelzeTCU9InsCMmpa
+                    ELzi0_mAuebKO-sVdFjsKWeFy2nI4Yg&usqp=CAU">
+                    <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgE_7EzVuGKnF4tV6DG6Aj7Z0XUvj3uR46VA
+                    Fu2WQPU_28kbxRv19J3AsbLt7k1GDp3Yw&usqp=CAU">
+                </div>
+        </div>
+       
+
+    </div>
+    <div id="bottom">
+        <h4>*THESE STATEMENTS HAVE NOT BEEN EVALUATED BY THE FOOD AND DRUG ADMINISTRATION.
+            THIS PRODUCT IS NOT INTENDED TO DIAGNOSE,TREAT,CURE OR PREVENT ANY DISEASE.</h4>
+    </div>
+
+</body>
+</html>
+<script>
+    var signupData=JSON.parse(localStorage.getItem("signup")) || []
+    function register(event){
+        event.preventDefault()
+        var firstName=document.getElementById("name").value;
+        var lastName=document.getElementById("lastname").value;
+        var mail=document.getElementById("email1").value;
+        var pass=document.getElementById("password").value;
+        if(signupData.length >0){
+            for(var i=0;i<signupData.length;i++){
+                if(signupData[i].mail===mail){
+                    var errorDiv=document.getElementById("error")
+                    errorDiv.innerHTML="email already is registered"
+                   
+                    return
+                }
+            }
+        }
+        if(firstName != "" && lastName != "" && mail != "" && pass != ""){
+          
+            var obj={ 
+                firstName:firstName,
+                lastName:lastName,
+                mail:mail,
+                password:pass,
+            }
+            signupData.push(obj)
+            localStorage.setItem("signup",JSON.stringify(signupData));
+            window.location.href="Himalayausa-Collab/"
+        }
+       
+    }
+</script>
