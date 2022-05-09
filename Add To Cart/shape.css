@@ -1,0 +1,89 @@
+/* header :start */
+
+
+.border1 {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(254, 126, 57); 
+}
+#top1 {
+    font-size: 15pxpx;
+    font-weight: bold;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+#top2 {
+    color: aliceblue;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+}
+
+
+
+/* hearder :end */
+
+
+
+/* navbar start */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .last, .first {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+  
+  li {
+    background-color: white;
+  }
+  
+  li a {
+    display: block;
+    color: #737374;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  li a:hover {
+    background-color: rgb(174, 156, 156)
+    
+  }
+
+  #search1 {
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+}
+#myact1 {
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+}
+#cart1 {
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+}
+/* navbar end */
