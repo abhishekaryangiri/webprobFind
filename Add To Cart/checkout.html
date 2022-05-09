@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        display: flex;
+        /* border: 1px solid black; */
+        height: auto
+    }
+    #left{
+        width: 70%;
+        /* border: 1px solid black; */
+    }
+    #right{
+        background-color: rgb(226, 235, 242);
+        width: 30%;
+        /* border: 1px solid black; */
+    }
+    .top{
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+        width: auto;
+    }
+    .option{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    
+        
+    }
+    .option>img{
+        width: 100px;
+        height: 50px;
+        margin-left: 100px;
+        margin-bottom: 20px;
+    }
+    h3{
+        text-align: center;
+        margin-top: -20px;
+        margin-left: -40px;
+    }
+    h4{
+        margin-left: 20px;
+        margin-top: -10px;
+    }
+   .top>img{
+       height: 100px;
+       width: 200px;
+       margin-left: 15px;
+
+    }
+    h2{
+        margin-left: 20px;
+    }
+    /* input{
+        width: 50%;
+        height: 20px;
+        margin-left: 20px;
+    } */
+    input{
+        padding: 5px 10px;
+        margin-top: 10px;
+        /* display: block; */
+        width: 80%;
+    }
+    #form{
+        display: flex;
+        width: 83%;
+    }
+    #rename{
+       margin-left: 20px;
+       height: 22px;
+    }
+    #name1{
+        height: 22px;
+    }
+    #name2{
+        margin-left: 20px;
+        height: 22px;
+    }
+    #name3{
+        margin-left: 20px;
+        height: 22px;
+    }
+    #address{
+        width: 80%;
+        margin-top: 20px;
+        height: 22px;
+    }
+    #contact{
+        margin-left: 45px;
+        width: 66%;
+        height: 22px;
+    }
+    #innerbottom{
+        margin: auto;
+        margin-left: 50px;
+        /* border: 1px solid red; */
+        width: 81%;
+        height: auto;
+    }
+    #country{
+        display: flex;
+        width: 82.5%;
+        height: 22px;
+        margin-top: 10px;
+
+        
+        
+    }
+    #phone{
+        margin-top: 45px;
+        height: 22px;
+    }
+    button{
+        margin-top: 20px;
+        background-color: grey;
+        color: white;
+        padding: 10px 80px;
+        border: 0px;
+      
+        height: 60px;
+    }
+    button:hover{
+        background-color: darkgrey;
+        cursor: pointer;
+    }
+    #btn{
+        /* border: 1px solid red;
+        display: flex; */
+        padding-right:22px ;
+        justify-content: end;
+       
+    }
+    #discount{
+        display: flex;
+        margin-top: 60px;
+    }
+    #Discount{
+        width: 60%;
+        margin-left: 20px;
+
+    }
+    #apply{
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 3px;
+        height: 40px;
+        width: 20%;
+        
+    }
+    #pricedetail{
+        border: 1px solid black;
+        margin-top: 60px;
+        width: 60%;
+        margin-left: 20%;
+        background-color: rgb(188, 185, 176);
+        line-height: 50px;
+        
+        /* margin: auto; */
+    }
+</style>
+<body>
+    <div id="main">
+    <div id="left">
+      <div class="top">
+          <img src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/new-logo.png?3732" alt="">
+          <h4> Cart > Information > Shipping > Payment</h4>
+          <h3>Express Checkout</h3>
+          <div class="option">
+              <img  src="https://www.bing.com/th?id=OIP.Ue40NKqi8Lfd0lYYxoblrQHaD4&w=345&h=180&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" alt="">
+              <img src="https://th.bing.com/th/id/OIP.0wSxqXRII6ipPKSIB_eEhgHaDt?w=285&h=175&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="">
+              <img src="https://th.bing.com/th/id/OIP.tQNs045gOIItm4J-8qrK6gHaEn?w=262&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="">
+          </div>
+      </div>
+      <div class="bottom">
+          <h2>Contact Information</h2>
+          <input id="contact" type="text" placeholder="Email or Mobile Number">
+          <h2>Shipping Address</h2>
+          <div id="innerbottom">
+          <div id="form">
+              <input id="name" type="text" placeholder="First Name">
+              <input id="rename" type="text" placeholder="Last Name">
+          </div>
+          <input id="address"   type="text" placeholder="Address">
+          <input id="address"  type="text" placeholder="Apartment,suite,etc.(optional)">
+          <input id="address"   type="text" placeholder="City">
+
+          <div id="country">
+            <input id="name1" type="text" placeholder="Country">
+            <input id="name2" type="text" placeholder="State">
+            <input id="name3" type="text" placeholder="ZIP code">
+          </div>
+
+          <input id="phone" type="text" placeholder="Phone">
+
+          <div id="btn">
+            <button onclick="window.location.href='payment.html'">Continue to shipping</button>
+        </div>
+
+      </div>
+    </div>
+</div>
+    <div id="right">
+        <div id="discount">
+            <input id="Discount" type="text" placeholder="Discount Code">
+            <button id="apply">Apply</button>
+        </div>
+        <div>
+            <div id="pricedetail">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;">ORDER SUMMARY</th>
+                        <th style="text-decoration: underline;">edit cart</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sub total:</td>
+                      
+                        <td id="amount"></td>
+                    </tr>
+                    <!-- <tr>
+                        <td>Shipping & handline:</td>
+                        <td>$249</td>
+                    </tr>
+                    <tr>
+                        <td>Tax:</td>
+                        <td>$890</td>
+                    </tr> -->
+                    
+                    <tr>
+                        <td style="color: black;">Order total:</td>
+                        <td style="color: black;" id="total"></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+     var amount = JSON.parse(localStorage.getItem("total_value"));
+    //console.log(amount)
+    document.getElementById("amount").innerHTML="";
+    document.getElementById("amount").innerText= `$${amount}`;
+
+
+    var total = amount;
+    document.getElementById("total").innerHTML="";
+    document.getElementById("total").innerText= `$${total}`;
+
+</script>
