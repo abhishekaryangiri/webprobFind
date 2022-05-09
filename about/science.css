@@ -32,6 +32,35 @@ h2 {
     color:rgb(15, 129, 129);
 } */
 
+#img1{
+    height: 500px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 50px;
+} 
+
+#img10{
+    height: 500px;
+    width: 100%;
+    border-radius: 0px;
+}
+#img2{
+    height: 500px;
+    width: 100%;
+}
+ #product{
+     display: flex;
+     
+ }
+ #dis10{
+     margin-left: 30px;
+     margin-right: 32px;
+     font-size: 32px;
+     font-weight: 600;
+     color: #666a64;
+ }
+
 
 
         /* footer :start */
@@ -58,8 +87,9 @@ h2 {
            margin-top: 5px;
         }
          #email{
-            height: 30px;
-            width: 330px;
+            height: 20px;
+            width: 200px;
+            font-size: 18px;
         }
         #lastpart>div>h1{
             color: black;
@@ -71,7 +101,8 @@ h2 {
         }
         #follow{
             display: flex;
-            gap: 20px;
+            gap: 6px;
+            color: #0b0b0b;
         }
         #follow >img{
             height: 30px;
@@ -129,10 +160,10 @@ h2 {
             margin-top: -15px;
             
         }
-        #email {
+        /* #email {
             font-size: 20px;
             
-        }
+        } */
         #tag12{
             color: #889583;
             font-size: 20px;
@@ -229,4 +260,12 @@ h2 {
             margin-top: 10px;
             margin-bottom: 10px;
             margin-right: auto;
+        }
+        #h1212{
+            font-size: 26px;
+            font-weight: 600;
+            color: #0b0b0b;
+        }
+        #last28{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
