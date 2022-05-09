@@ -259,21 +259,22 @@ h:hover{
 <!-- navbar start -->
 
 
-    <div class="header">
-        <ul>
-          <div class="first">
-            <div>  <img src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/90-Plus-years-500_160x.png?v=1609913612" alt=""></div>
-            <li><a href="">Shop</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Store Locator</a></li>
-          </div>
-          <div class="last">
-            <li><a href=""><img id="search1" src="https://img.icons8.com/ios/2x/search.png" alt=""></a></li>
-            <li><a href=""><img id="myact1" src="https://img.icons8.com/ios/2x/user--v3.gif" alt=""></a></li>
-            <li><a href=""><img id="cart1" src="https://img.icons8.com/dotty/2x/shopping-cart.png" alt=""></a></li>
-          </div>
-        </ul>
+<div class="header">
+    <ul>
+      <div class="first">
+        <div id="abc1"> 
+         <a href="http://127.0.0.1:5503/homepage.html"><img src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/90-Plus-years-500_160x.png?v=1609913612" alt=""></a></div>
+        <li><a href="http://127.0.0.1:5503/product.html">Shop</a></li>
+        <li><a href="http://127.0.0.1:5503/about/pro.html">About</a></li>
+        <li><a href="">Store Locator</a></li>
       </div>
+      <div class="last">
+        <li><a href="http://127.0.0.1:5503/product.html"><img id="search1" src="https://img.icons8.com/ios/2x/search.png" alt="search"></a></li>
+        <li><a href="http://127.0.0.1:5503/SignUpPage/signin.html"><img id="myact1" src="https://img.icons8.com/ios/2x/user--v3.gif" alt="login"></a></li>
+        <li><a href="http://127.0.0.1:5503/Add%20To%20Cart/Add%20to%20cart.html"><img id="cart1" src="https://img.icons8.com/dotty/2x/shopping-cart.png" alt="cart"></a></li>
+      </div>
+    </ul>
+  </div>
 
 <!--  navbar end -->
 <div id="middlepart">
@@ -298,7 +299,7 @@ h:hover{
                 <input type="password" placeholder="Enter Password" id="password" >
                 <div id="error"></div>
                 <!-- <a href="sign in.html"><input id="submit" type="submit" value="CREATE" name="submit"  ></a> -->
-                <button id="creat" type="submit">CREATE</button>
+                <button id="creat" type="submit"><a href="http://127.0.0.1:5502/Himalayausa-Collab-signin/signin.html">CREATE</a> </button>
                 <h4>or Return to Store</h4>
             </form>
         </div>
@@ -387,7 +388,7 @@ h:hover{
             }
             signupData.push(obj)
             localStorage.setItem("signup",JSON.stringify(signupData));
-            window.location.href="Himalayausa-Collab/"
+            window.location.href="http://127.0.0.1:5503/homepage.html"
         }
        
     }

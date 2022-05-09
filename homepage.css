@@ -29,24 +29,7 @@
 #maindiv {
     margin-top: auto;
 }
-#search1 {
-    height: 30px;
-    width: 30px;
-    margin-top: 15px;
-    /* margin-bottom: 20px; */
-}
-#myact1 {
-    height: 30px;
-    width: 30px;
-    margin-top: 15px;
-    /* margin-bottom: 20px; */
-}
-#cart1 {
-    height: 30px;
-    width: 30px;
-    margin-top: 15px;
-    /* margin-bottom: 20px; */
-}
+
 .pict1 {
     margin-top: -250px;
     margin-left: 10%;
@@ -78,7 +61,28 @@ button {
 button:hover{
     background-color: rgb(50, 50, 47);
 }
+
+
 /* navbar start */
+#search1 {
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+}
+#myact1 {
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+}
+#cart1 {
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+}
+
 ul {
     list-style-type: none;
     margin: 0;
