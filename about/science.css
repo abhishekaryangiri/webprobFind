@@ -1,3 +1,39 @@
+/* #total {
+    display:grid;
+    grid-template-columns:repeat(2,1fr) ;
+
+    margin: auto;
+    gap:30px;
+}
+.content {
+    height: 600px;
+    width: 95%;
+    
+}
+#img1 {
+    height: 500px;
+    width: 100%;
+    
+}
+#p1{
+    line-height: 30px;
+    font-size: 20px;
+}
+#p2{
+    line-height: 30px;
+    font-size: 20px;
+}
+#img2 {
+    height:600px;
+    width:100%;
+
+}
+h2 {
+    color:rgb(15, 129, 129);
+} */
+
+
+
         /* footer :start */
         #lastpart{
             /* border: 1px solid goldenrod; */
@@ -67,15 +103,6 @@
         h2 {
             font-family: Arial, Helvetica, sans-serif;
         }
-        /* h1{
-            color: #4c4c53;
-            font-size: 25px;
-            font-weight: 550;
-            text-align: justify;
-        
-        } */
-
-
         h1{
             color: #4c4c53;
             font-size: 25px;
@@ -114,3 +141,92 @@
         }
         
         /* footer end */
+
+        
+        /* navbar start */
+
+
+        #search1 {
+            height: 30px;
+            width: 30px;
+            margin-top: 15px;
+            /* margin-bottom: 20px; */
+        }
+        #myact1 {
+            height: 30px;
+            width: 30px;
+            margin-top: 15px;
+            /* margin-bottom: 20px; */
+        }
+        #cart1 {
+            height: 30px;
+            width: 30px;
+            margin-top: 15px;
+            /* margin-bottom: 20px; */
+        }
+        
+        
+         ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          .last, .first {
+            display: flex;
+            margin-top: auto;
+            margin-bottom: auto;
+            /* margin-left: auto;
+            margin-right: auto; */ */
+          }
+          
+          li {
+            background-color: white;
+          }
+          
+          li a {
+            display: block;
+            color: #737374;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+          }
+          
+          li a abc1:hover {
+            background-color: rgb(188, 203, 184)
+            
+          }
+        
+          Shop about:hover {
+            background-color: rgb(188, 203, 184)
+            
+          } 
+        /* navbar end */
+        .border1 {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            background-color: rgb(254, 126, 57); 
+        }
+        #top1 {
+            font-size: 15pxpx;
+            font-weight: bold;
+            color: aliceblue;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: auto;
+        }
+        #top2 {
+            color: aliceblue;
+            font-size: 15px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: auto;
+        }
