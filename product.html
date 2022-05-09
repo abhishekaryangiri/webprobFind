@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+     
+
+    <style>
+        .products{
+            display:grid;
+            width:70%;
+            margin: auto;
+            grid-template-columns: repeat(4,1fr);   
+        
+        }
+        .products>div{
+            width: 80%;
+            /* width:500px; */
+        }
+        .products img{
+            width:100%;
+
+        }
+        h2{
+            font-family: Poppins, sans-serif;
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: 400;
+        }
+        h1{
+            text-align: center;
+            font-family: Poppins, sans-serif;
+            font-size: 24px;
+            line-height: 34px;
+            font-weight: 500;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <h1>Products</h1>
+    <select id="filterRole" onChange="handleFilter()">
+        <option value="none">Select a Category</option>
+        <option value="Featured">Featured</option>
+        <option value="Best Selling">Best Selling</option>
+        
+    </select>
+
+    <select id="sortNames" onChange="handleNameSort()">
+        <option value="">Sort By Name</option>
+        <option value="asc">Ascending</option>
+        <option value="dsc">Descending</option>
+      </select>
+  
+      <select id="sortPrice" onChange="handlePriceSort()">
+        <option value="nil">Sort By Price</option>
+        <option value="HTL">High to Low</option>
+        <option value="LTH">Low to High</option>
+      </select>
+  
+
+    <div class="products"></div>
+
+    
+</body>
+
+<script>
+
+    var products_data=[
+
+    {
+    brand:"Back to Balance Cleanse",
+    price: "29.95",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/image-3_1024x.png?v=1591028195"
+    },
+    {
+    brand: "Bamboo & Sea Salt Whitening Antiplaque Toothpaste",
+    price: "5.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/HimalayaBambooToothpaste-Tube_Front_1024x.png?v=1613065864"
+    }, 
+    {
+    brand: "Body Bar: Purifying (Neem & Turmeric",
+    price: "4.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/BEAUTY_bodybar_purifying-2_1024x.png?v=1595909766"
+    },  
+    {
+    brand: "Body Bar: Refreshing (Lavender & Rosemary)",
+    price: "4.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/BEAUTY_bodybar_refreshing-1_1024x.png?v=1595909931"
+    },
+    { 
+    brand: "Boswellia",
+    price: "14.95",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/Boswellia-60---Box-Bottle_1024x.png?v=1595862802"
+    },  
+    { 
+    brand: "Charcoal & Black Seed Oil Whitening Antiplaque Toothpaste",
+    price: "5.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/HimalayaCharcoalToothpaste-Tube_Front_1024x.png?v=1613059882"
+    },
+    { 
+    brand: "Chest Palm P.M",
+    price: "7.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/HimalayaChestBalmPMwithHerbCartonJar_1024x.png?v=1624548043"
+    },   
+    { 
+    brand: "Chyavanprash",
+    price: "13.95",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/image-58_1024x.png?v=1591027935"
+    },  
+    {
+    brand: "ComfortCleanse",
+    price: "20.95",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/image-33_1024x.png?v=1591027962"
+    },
+    {
+    brand: "Face Shrub: Exfoliating (Walnut & Wood Apple)",  
+    price: "8.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/BEAUTY_facewash_exoliatingwwa_bottlebox_1024x.png?v=1595909354"
+    }, 
+    {
+    brand: "Face Wash: Balancing (Neem & Turmeric)",
+    price: "8.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/BEAUTY_facewash_balancing_neem_turmeric_bottlebox_1024x.png?v=1595909161"
+    },  
+    {
+    brand: "Face Wash: Hydrating",
+    price: "8.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/BEAUTY_facewash_hydrating_bottlebox_1024x.png?v=1595909481"
+    },
+    { 
+    brand: "Face Wash: Invigorating",
+    price: "8.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/InvigoratingFaceWash_1024x.png?v=1595909620"
+    },  
+    { 
+    brand: "FlorAvani",
+    price: "39.95",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/image-69_1024x.png?v=1590836866"
+    },
+    { 
+    brand: "GlucoCare",
+    price: "24.95",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/image-126_1024x.png?v=1591028001"
+    },   
+    { 
+    brand: "Guggul",
+    price: "15.95",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/image-36_1024x.png?v=1590836878"
+    },
+    { 
+    brand: "HeartCare",
+    price: "22.95",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/image-36_fbc92680-5171-436b-acc1-6a5a6a2ac59c_1024x.png?v=1591028013"
+    },
+    { 
+    brand: "Hello Energy",
+    price: "23.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/HUSAHELLOENERGYBOX_BOTTLE_1024x.jpg?v=1608243299"
+    },   
+    { 
+    brand: "Hello Joy",
+    price: "23.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/HUSAHELLOJOYBOX_BOTTLE_1024x.jpg?v=1608241956"
+    },
+    { 
+    brand: "Hello Peace",
+    price: "23.99",
+    category: "Featured",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/HUSAHELLOPEACEBOX_BOTTLE_1024x.jpg?v=1608243907"
+    },
+    {
+    brand: "Organic Ashwagandha",
+    price: "13.95",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/Ashwagandha_BoxBottle_30_1024x.jpg?v=1591028054"
+    },
+    {
+    brand: "LiverCare",  
+    price: "27.95",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/LiverCare-90---Box-Bottle_1024x.png?v=1595815804"
+    }, 
+    {
+    brand: "StressCare",
+    price: "17.99",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/StressCare-30_1024x.png?v=1595825645"
+    },  
+    {
+    brand: "Organic Gymnema",
+    price: "12.95",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/Gymnema_Box_Bottle_30s_1024x.png?v=1591028093"
+    },
+    { 
+    brand: "Neem & Pomegranate Original Toothpaste",
+    price: "5.99",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/Neem-and-Pom---Box-Tube_1024x.png?v=1597744049"
+    },  
+    { 
+    brand: "MindCare",
+    price: "22.95",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/MindCare-60---Box-Bottle_1024x.png?v=1595823793"
+    },
+    { 
+    brand: "Simply Mint White Toothpaste",
+    price: "5.99",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/Whitening-Mint---Box-Tube_1024x.png?v=1597743896"
+    },   
+    { 
+    brand: "Organic Bitter Melon",
+    price: "11.95",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/Bitter-Melon-30---Box-Bottle_1024x.png?v=1595862276"
+    },
+    { 
+    brand: "Organice Bacopa",
+    price: "15.95",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/image-65_b247b590-2796-4443-8dda-5cac30a38e0c_1024x.png?v=1591028066"
+    },
+    { 
+    brand: "Organic Triphala",
+    price: "10.95",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/Triphala-30-box-bottle_1024x.png?v=1594098276"
+    },   
+    { 
+    brand: "Boswellia",
+    price: "14.95",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/Boswellia-60---Box-Bottle_1024x.png?v=1595862802"
+    },
+    { 
+    brand: "Menopause",
+    price: "25.95",
+    category: "Best Selling",
+    img: "https://cdn.shopify.com/s/files/1/0399/1728/9633/products/MenoCare-120---Box-Bottle_1024x.png?v=1595822999"
+    }
+         
+
+    
+
+    ]
+
+
+    
+
+
+    localStorage.setItem("masai-ecomm",JSON.stringify(products_data));
+
+    let cartLSData=JSON.parse(localStorage.getItem("masai-cart")) || [];
+
+    var products=document.querySelector(".products");
+    var filter=document.querySelector("select");
+
+    function display(data){
+
+        products.innerHTML=null;
+
+        data.forEach(function(element){
+
+            var card=document.createElement("div");
+
+            var img=document.createElement("img");
+            img.src = element.img;
+
+            var brand=document.createElement("h2");
+            brand.textContent=element.brand;
+
+            // var desc=document.createElement("p");
+            // desc.textContent=element.name;
+
+            // var category=document.createElement("h3");
+            // category.textContent=element.category;
+
+            var price=document.createElement("h2");
+            price.textContent=element.price;
+
+            var button=document.createElement("button");
+            button.innerText="Add To Cart";
+            button.addEventListener("click",function(){
+                AddToCart(element);
+            })
+
+            card.append(img,brand,price,button);
+
+
+            products.append(card);
+        });
+
+
+        
+    }
+
+    display(products_data);
+
+    function handleFilter() {
+      var selected = document.getElementById("filterRole").value;
+      console.log(selected);
+      var filtered = products_data.filter(function (element) {
+        return element.category == selected;
+      });
+      console.log(filtered);
+      display(filtered);
+    }
+
+    function handlePriceSort() {
+      var selected = document.getElementById("sortPrice").value;
+      //console.log(selected);
+      if (selected == "HTL") {
+        products_data.sort(function (a, b) {
+          return b.price - a.price;
+        });
+        // console.log(jobArr);
+        display(products_data);
+      }
+      if (selected == "LTH") {
+        products_data.sort(function (a, b) {
+          return a.price - b.price;
+        });
+        // console.log(jobArr);
+        display(products_data);
+      }
+    }
+    // document
+    //   .querySelector("#sortNames")
+    //   .addEventListener("change", handleNameSort);
+    function handleNameSort() {
+      var selected = document.getElementById("sortNames").value;
+      //console.log(selected);
+
+      if (selected == "asc") {
+        products_data.sort(function (a, b) {
+          var x = a.brand;
+          var y = b.brand;
+          if (x > y) {
+            return 1;
+          }
+          if (x < y) {
+            return -1;
+          }
+          return 0;
+        });
+        //console.log(products_data);
+        display(products_data);
+      }
+      if (selected == "dsc") {
+        products_data.sort(function (a, b) {
+          var x = a.brand;
+          var y = b.brand;
+          if (x > y) {
+            return -1;
+          }
+          if (x < y) {
+            return 1;
+          }
+          return 0;
+        });
+        //console.log(products_data);
+        display(products_data);
+      }
+    }
+
+    function AddToCart(element){
+        cartLSData.push(element);
+        localStorage.setItem("masai-cart",JSON.stringify(cartLSData));
+        alert("Product added successfully");
+        }
+
+</script>
+</html>
